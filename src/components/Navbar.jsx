@@ -8,8 +8,9 @@ import logo from "../assets/logo-advocacy.png";
 
 const StyledHeader = styled.header`
   display: flex;
+  position: absolute;
   width: 100%;
-  height: 100%;
+  top: 0;
   margin-top: 55px;
   align-items: center;
   justify-content: center;
@@ -61,10 +62,7 @@ const StyledHeader = styled.header`
     & > button {
       display: none;
       cursor: pointer;
-
-      svg {
-        color: #ffffff;
-      }
+      background-color: transparent;
 
       @media (max-width: 992px) {
         display: flex;
