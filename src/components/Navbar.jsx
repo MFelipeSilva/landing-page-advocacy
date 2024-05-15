@@ -17,10 +17,17 @@ const StyledHeader = styled.header`
 
   & > nav {
     display: flex;
+    max-width: 1338.39px;
     width: 70vw;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    & > img {
+      max-width: 162px;
+      max-height: 49px;
+      object-fit: contain;
+    }
 
     ul {
       display: flex;
@@ -54,7 +61,7 @@ const StyledHeader = styled.header`
         width: 70%;
       }
 
-      @media (max-width: 992px) {
+      @media (max-width: 768px) {
         display: none;
       }
     }
@@ -64,9 +71,13 @@ const StyledHeader = styled.header`
       cursor: pointer;
       background-color: transparent;
 
-      @media (max-width: 992px) {
+      @media (max-width: 768px) {
         display: flex;
       }
+    }
+
+    @media (max-width: 992px) {
+      width: 90vw;
     }
   }
 `;
