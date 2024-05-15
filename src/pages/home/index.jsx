@@ -23,7 +23,7 @@ const Container = styled.section`
   width: 100%;
   min-height: 100vh;
   gap: 150px;
-  padding: 10em 0 0 0;
+  padding: 13em 0 0 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -34,26 +34,27 @@ const Container = styled.section`
   & > div {
     display: flex;
     gap: 65px;
+    text-align: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 
     & > h1 {
       color: #ffffff;
       max-width: 878px;
       width: 90vw;
-      font-size: clamp(35pt, 6vw, 58pt);
+      font-size: clamp(35px, 6vw, 54px);
       font-weight: 700;
-      text-align: center;
-      font-variant-caps: all-small-caps;
+      line-height: 1.5;
+      text-transform: uppercase;
     }
 
     & > h2 {
       color: #ffffff;
       max-width: 735px;
       width: 90vw;
-      font-size: clamp(18px, 4vw, 24px);
+      font-size: clamp(16px, 4vw, 24px);
       font-weight: 300;
-      text-align: center;
     }
 
     @media (max-width: 768px) {
@@ -74,6 +75,10 @@ const Container = styled.section`
       width: 70px;
       height: 70px;
     }
+  }
+
+  @media (max-width: 768px) {
+    gap: 130px;
   }
 `;
 

@@ -15,12 +15,12 @@ const StyledButton = styled.button`
 
   & > span {
     color: #ffffff;
-    font-size: clamp(16px, 3vw, 20px);
+    font-size: clamp(15px, 3vw, 20px);
     font-weight: 400;
   }
 
   @media (max-width: 480px) {
-    width: 100%;
+    padding: 15px;
   }
 `;
 
