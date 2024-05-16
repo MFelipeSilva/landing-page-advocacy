@@ -23,7 +23,7 @@ const Container = styled.section`
   width: 100%;
   min-height: 100vh;
   gap: 150px;
-  padding: 13em 0 0 0;
+  padding-top: 13em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@ const Container = styled.section`
     & > h1 {
       color: #ffffff;
       max-width: 878px;
-      width: 90vw;
+      width: 85vw;
       font-size: clamp(35px, 6vw, 54px);
       font-weight: 700;
       line-height: 1.5;
@@ -52,8 +52,8 @@ const Container = styled.section`
     & > h2 {
       color: #ffffff;
       max-width: 735px;
-      width: 90vw;
-      font-size: clamp(16px, 4vw, 24px);
+      width: 85vw;
+      font-size: clamp(17px, 3.5vw, 24px);
       font-weight: 300;
     }
 

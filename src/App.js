@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import Home from "./pages/home";
 import AboutMe from "./pages/about-me";
+import Services from "./pages/services";
 
 const Container = styled.main`
   display: flex;
@@ -15,6 +16,7 @@ function App() {
     <Container id="/">
       <Home />
       <AboutMe />
+      <Services />
     </Container>
   );
 }

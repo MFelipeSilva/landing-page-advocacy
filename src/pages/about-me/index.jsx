@@ -71,17 +71,16 @@ const Container = styled.section`
       }
 
       @media (max-width: 768px) {
-        width: 90vw;
+        width: 85vw;
       }
     }
 
     @media (max-width: 1280px) {
       min-width: 0;
-      width: 90vw;
+      width: 85vw;
     }
 
-    @media (max-width: 768px) {
-      width: 90vw;
+    @media (max-width: 992px) {
       flex-direction: column;
     }
   }
@@ -89,7 +88,7 @@ const Container = styled.section`
 
 function AboutMe() {
   return (
-    <Container>
+    <Container id="about-me">
       <div>
         <img src={photo_lawyer} alt="photo lawyer" />
         <div>

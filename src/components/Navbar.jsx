@@ -79,7 +79,7 @@ const StyledHeader = styled.header`
 
     @media (max-width: 1280px) {
       min-width: 0;
-      width: 90vw;
+      width: 85vw;
     }
   }
 `;
