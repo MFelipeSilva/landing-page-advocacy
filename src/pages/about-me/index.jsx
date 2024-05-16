@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { IconBalance } from "../../components/icons";
 
+import { Button } from "../../components/Button";
+
 import photo_lawyer from "../../assets/photo-lawyer.png";
 
 const Container = styled.section`
@@ -16,7 +18,7 @@ const Container = styled.section`
     display: flex;
     max-width: 1338px;
     width: 70vw;
-    gap: 91px;
+    gap: 80px;
     align-items: center;
     justify-content: space-between;
 
@@ -50,6 +52,7 @@ const Container = styled.section`
         line-height: 1.5;
         text-transform: uppercase;
       }
+
       & > h3 {
         display: flex;
         gap: 10px;
@@ -65,6 +68,10 @@ const Container = styled.section`
 
       @media (max-width: 992px) {
         min-width: 0;
+      }
+
+      @media (max-width: 768px) {
+        width: 90vw;
       }
     }
 
@@ -85,7 +92,6 @@ function AboutMe() {
     <Container>
       <div>
         <img src={photo_lawyer} alt="photo lawyer" />
-
         <div>
           <h2>Esteban Lakatos Júnior</h2>
           <h3>
@@ -103,11 +109,9 @@ function AboutMe() {
             suporte especializado para lidar com casos de diferentes naturezas.
             <br /> Além disso, ao longo dos anos, construímos uma reputação
             sólida baseada em resultados comprovados e um compromisso inabalável
-            com a excelência no atendimento ao cliente. Nossa equipe de
-            advogados altamente qualificados e experientes está sempre pronta
-            para oferecer assistência jurídica de alta qualidade, adaptada às
-            necessidades específicas de cada cliente.
+            com a excelência no atendimento ao cliente.
           </p>
+          <Button />
         </div>
       </div>
     </Container>

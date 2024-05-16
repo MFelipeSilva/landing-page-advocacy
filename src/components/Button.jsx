@@ -4,6 +4,7 @@ import { IconWhatsapp } from "./icons";
 
 const StyledButton = styled.button`
   display: flex;
+  max-width: 347.47px;
   gap: 10px;
   padding: 20px;
   cursor: pointer;
@@ -15,15 +16,15 @@ const StyledButton = styled.button`
 
   & > span {
     color: #ffffff;
-    font-size: clamp(15px, 3vw, 20px);
+    font-size: clamp(15px, 1.5vw, 18px);
     font-weight: 400;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
+    max-width: none;
     padding: 15px;
   }
 `;
-
 export const Button = () => {
   return (
     <StyledButton>
