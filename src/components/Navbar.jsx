@@ -17,7 +17,8 @@ const StyledHeader = styled.header`
 
   & > nav {
     display: flex;
-    max-width: 1338.39px;
+    max-width: 1338px;
+    min-width: 1100px;
     width: 70vw;
     flex-direction: row;
     align-items: center;
@@ -76,7 +77,8 @@ const StyledHeader = styled.header`
       }
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 1280px) {
+      min-width: 0;
       width: 90vw;
     }
   }
