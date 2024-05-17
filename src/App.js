@@ -1,3 +1,5 @@
+import { Element } from "react-scroll";
+
 import styled from "styled-components";
 
 import Home from "./pages/home";
@@ -15,12 +17,22 @@ const Container = styled.main`
 
 function App() {
   return (
-    <Container id="/">
-      <Home />
-      <AboutMe />
-      <Services />
-      <Testimonials />
-      <Contact />
+    <Container>
+      <Element name="home">
+        <Home />
+      </Element>
+      <Element name="about-me">
+        <AboutMe />
+      </Element>
+      <Element name="services">
+        <Services />
+      </Element>
+      <Element name="testimonials">
+        <Testimonials />
+      </Element>
+      <Element name="contact">
+        <Contact />
+      </Element>
     </Container>
   );
 }

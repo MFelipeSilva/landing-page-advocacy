@@ -10,7 +10,7 @@ const Container = styled.section`
   display: flex;
   width: 100%;
   height: 100%;
-  padding: 10em 0 5em 0;
+  padding: 10em 0;
   align-items: center;
   justify-content: center;
 

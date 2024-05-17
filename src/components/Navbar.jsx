@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Link } from "react-scroll";
+
 import styled from "styled-components";
 
 import { IconMenu, IconClose } from "./icons";
@@ -93,16 +95,48 @@ export const Navbar = () => {
         <img src={logo} alt="logo" />
         <ul>
           <li>
-            <a href="#about-me">Sobre mim</a>
+            <Link
+              to="about-me"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Sobre mim
+            </Link>
           </li>
           <li>
-            <a href="#services">Serviços</a>
+            <Link
+              to="services"
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={500}
+            >
+              Serviços
+            </Link>
           </li>
           <li>
-            <a href="#testimonials">Depoimentos</a>
+            <Link
+              to="testimonials"
+              spy={true}
+              smooth={true}
+              offset={-120}
+              duration={500}
+            >
+              Depoimentos
+            </Link>
           </li>
           <li>
-            <a href="#contact">Contato</a>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+            >
+              Contato
+            </Link>
           </li>
         </ul>
         {isOpen ? (
