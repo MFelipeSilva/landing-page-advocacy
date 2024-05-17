@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 import { Button } from "../../components/Button";
 
-import { IconBottomArrow } from "../../components/icons";
+import { IconArrowBottom } from "../../components/icons";
 
 import banner_home from "../../assets/banner-home.png";
 
@@ -96,7 +96,7 @@ function Home() {
         </h2>
         <Button />
       </div>
-      <IconBottomArrow />
+      <IconArrowBottom />
     </Container>
   );
 }
