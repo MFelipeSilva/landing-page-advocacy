@@ -7,7 +7,7 @@ const Container = styled.section`
   width: 100%;
   height: 100%;
   gap: 60px;
-  padding: 4em 0;
+  padding: 5em 0 10em 0;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -61,7 +61,7 @@ const Container = styled.section`
 const Card = styled.div`
   display: flex;
   width: 100%;
-  height: 340px;
+  height: 320px;
   gap: 34px;
   padding: 42px 20px;
   text-align: center;
