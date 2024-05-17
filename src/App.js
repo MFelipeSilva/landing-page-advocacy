@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import AboutMe from "./pages/about-me";
 import Services from "./pages/services";
 import Testimonials from "./pages/testimonials";
+import Contact from "./pages/contact";
 
 const Container = styled.main`
   display: flex;
@@ -19,6 +20,7 @@ function App() {
       <AboutMe />
       <Services />
       <Testimonials />
+      <Contact />
     </Container>
   );
 }
