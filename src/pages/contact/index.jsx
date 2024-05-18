@@ -51,7 +51,7 @@ const Container = styled.section`
 
       & > h3 {
         color: #000000;
-        font-size: clamp(20px, 2vw, 22px);
+        font-size: clamp(18px, 2vw, 22px);
         font-weight: 700;
       }
 
