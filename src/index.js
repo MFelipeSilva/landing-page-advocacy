@@ -6,6 +6,7 @@ import App from "./App";
 import GlobalStyle from "./global";
 
 import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     <GlobalStyle />
     <Navbar />
     <App />
+    <Footer />
   </React.StrictMode>
 );
 
