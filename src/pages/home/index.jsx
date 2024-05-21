@@ -1,5 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
+import { Link } from "react-scroll";
+
 import { Button } from "../../components/Button";
 
 import { IconArrowBottom } from "../../components/icons";
@@ -62,18 +64,20 @@ const Container = styled.section`
     }
   }
 
-  & > svg {
-    cursor: pointer;
-    animation: ${bounceAnimation} 2s ease-in-out infinite;
+  & > a {
+    & > svg {
+      cursor: pointer;
+      animation: ${bounceAnimation} 2s ease-in-out infinite;
 
-    @media (max-width: 992px) {
-      width: 80px;
-      height: 80px;
-    }
+      @media (max-width: 992px) {
+        width: 80px;
+        height: 80px;
+      }
 
-    @media (max-width: 768px) {
-      width: 70px;
-      height: 70px;
+      @media (max-width: 768px) {
+        width: 70px;
+        height: 70px;
+      }
     }
   }
 
@@ -96,7 +100,9 @@ function Home() {
         </h2>
         <Button />
       </div>
-      <IconArrowBottom />
+      <Link to="about-me" spy={true} smooth={true} offset={0} duration={500}>
+        <IconArrowBottom />
+      </Link>
     </Container>
   );
 }
