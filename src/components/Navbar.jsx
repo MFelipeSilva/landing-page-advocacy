@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Link } from "react-scroll";
 
@@ -27,6 +27,7 @@ const StyledHeader = styled.header`
     justify-content: space-between;
 
     & > img {
+      z-index: 3;
       max-width: 162px;
       max-height: 49px;
       object-fit: contain;
@@ -71,6 +72,7 @@ const StyledHeader = styled.header`
     }
 
     & > button {
+      z-index: 3;
       display: none;
       cursor: pointer;
       background-color: transparent;
@@ -87,8 +89,81 @@ const StyledHeader = styled.header`
   }
 `;
 
+const StyledMenuBar = styled.div`
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  padding: 15em 0;
+  background-color: #00111c;
+  transform: translateY(${(props) => (props.isOpen ? "0" : "-100%")});
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  & > nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      text-align: center;
+      flex-direction: column;
+
+      li > a {
+        position: relative;
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 400;
+        padding-bottom: 2px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      li > a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: #ffffff;
+        transition: width 0.3s;
+        transform: translateX(-50%);
+      }
+
+      li > a:hover::before {
+        width: 70%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      display: flex;
+    }
+  }
+`;
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const toggleScroll = () => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  };
+
+  useEffect(() => {
+    toggleScroll();
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   return (
     <StyledHeader>
@@ -154,6 +229,64 @@ export const Navbar = () => {
           </button>
         )}
       </nav>
+      <StyledMenuBar onClick={() => setIsOpen(false)} isOpen={isOpen}>
+        <nav>
+          <ul>
+            <li>
+              <Link
+                to="about-me"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                href="about-me"
+                onClick={() => setIsOpen(false)}
+              >
+                Sobre mim
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                href="services"
+                onClick={() => setIsOpen(false)}
+              >
+                Serviços
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="testimonials"
+                spy={true}
+                smooth={true}
+                offset={-120}
+                duration={500}
+                href="testimonials"
+                onClick={() => setIsOpen(false)}
+              >
+                Depoimentos
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+                href="contact"
+                onClick={() => setIsOpen(false)}
+              >
+                Contato
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </StyledMenuBar>
     </StyledHeader>
   );
 };
