@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { IconWhatsapp } from "./icons";
 
-const StyledButton = styled.button`
+const StyledLink = styled.a`
   display: flex;
   max-width: 347.47px;
   gap: 10px;
@@ -10,6 +10,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   border-radius: 8px;
   background-color: #00111c;
+  text-decoration: none;
   box-shadow: 0 1px 10px 8px rgba(0, 0, 0, 20%);
   align-items: center;
   justify-content: center;
@@ -27,9 +28,12 @@ const StyledButton = styled.button`
 `;
 export const Button = () => {
   return (
-    <StyledButton>
+    <StyledLink
+      href="https://wa.me/5511111111111?text=Ol%C3%A1%21+Vi+o+seu+an%C3%BAncio+no+site+e+preciso+de+um+especialista"
+      target="_blank"
+    >
       <IconWhatsapp />
       <span>Converse com um especialista</span>
-    </StyledButton>
+    </StyledLink>
   );
 };

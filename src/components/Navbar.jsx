@@ -40,12 +40,13 @@ const StyledHeader = styled.header`
 
       li > a {
         color: #ffffff;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 400;
         position: relative;
         padding-bottom: 2px;
+        letter-spacing: 1px;
         text-decoration: none;
-        font-variant-caps: all-small-caps;
+        text-transform: uppercase;
       }
 
       li > a::before {
@@ -101,6 +102,7 @@ export const Navbar = () => {
               smooth={true}
               offset={0}
               duration={500}
+              href="about-me"
             >
               Sobre mim
             </Link>
@@ -112,6 +114,7 @@ export const Navbar = () => {
               smooth={true}
               offset={-80}
               duration={500}
+              href="services"
             >
               Serviços
             </Link>
@@ -123,6 +126,7 @@ export const Navbar = () => {
               smooth={true}
               offset={-120}
               duration={500}
+              href="testimonials"
             >
               Depoimentos
             </Link>
@@ -134,17 +138,18 @@ export const Navbar = () => {
               smooth={true}
               offset={-50}
               duration={500}
+              href="contact"
             >
               Contato
             </Link>
           </li>
         </ul>
         {isOpen ? (
-          <button onClick={() => setIsOpen(!isOpen)}>
+          <button onClick={() => setIsOpen(!isOpen)} aria-label="Menu fechado">
             <IconClose />
           </button>
         ) : (
-          <button onClick={() => setIsOpen(!isOpen)}>
+          <button onClick={() => setIsOpen(!isOpen)} aria-label="Menu aberto">
             <IconMenu />
           </button>
         )}

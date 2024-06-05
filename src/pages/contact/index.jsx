@@ -116,9 +116,9 @@ function Contact() {
 
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117039.43258133324!2d-46.707676301660946!3d-23.5511167058672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef6320e88ea59%3A0x154f476fd0ed0fae!2sAL%20Advogados!5e0!3m2!1spt-BR!2sbr!4v1715979731662!5m2!1spt-BR!2sbr"
+          title="Mapa mostrando a localização da nossa advocacia"
           width="600"
           height="450"
-          allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>

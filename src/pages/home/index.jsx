@@ -36,6 +36,8 @@ const Container = styled.section`
   & > div {
     display: flex;
     gap: 65px;
+    max-width: 878px;
+    width: 85vw;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -43,8 +45,6 @@ const Container = styled.section`
 
     & > h1 {
       color: #ffffff;
-      max-width: 878px;
-      width: 85vw;
       font-size: clamp(35px, 6vw, 54px);
       font-weight: 700;
       line-height: 1.5;
@@ -100,7 +100,15 @@ function Home() {
         </h2>
         <Button />
       </div>
-      <Link to="about-me" spy={true} smooth={true} offset={0} duration={500}>
+      <Link
+        to="about-me"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={500}
+        href="about-me"
+        aria-label="Direcionar para sobre mim"
+      >
         <IconArrowBottom />
       </Link>
     </Container>

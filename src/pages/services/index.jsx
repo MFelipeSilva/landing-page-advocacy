@@ -90,7 +90,7 @@ function Services() {
       <h2>Nossos serviços</h2>
       <div>
         {services.map((service) => (
-          <Card>
+          <Card key={service.id}>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
           </Card>

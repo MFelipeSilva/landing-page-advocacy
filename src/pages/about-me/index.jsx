@@ -14,7 +14,7 @@ const Container = styled.section`
   align-items: center;
   justify-content: center;
 
-  & > div {
+  & > article {
     display: flex;
     max-width: 1338px;
     width: 70vw;
@@ -89,7 +89,7 @@ const Container = styled.section`
 function AboutMe() {
   return (
     <Container id="about-me">
-      <div>
+      <article>
         <img src={photo_lawyer} alt="photo lawyer" />
         <div>
           <h2>Esteban Lakatos Júnior</h2>
@@ -112,7 +112,7 @@ function AboutMe() {
           </p>
           <Button />
         </div>
-      </div>
+      </article>
     </Container>
   );
 }
